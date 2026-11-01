@@ -1,0 +1,6 @@
+{
+  "name": "TheBill - SMS Expense Tracker & Vault",
+  "description": "Encrypted offline SMS expense tracker with automatic bank notification categorization, MPIN security, and budget alerts.",
+  "requestFramePermissions": ["notifications"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

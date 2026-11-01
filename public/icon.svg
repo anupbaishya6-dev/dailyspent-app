@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <circle cx="256" cy="256" r="200" fill="url(#glowGrad)" />
+  
+  <!-- Outer shield border -->
+  <rect x="32" y="32" width="448" height="448" rx="100" fill="none" stroke="#1e293b" stroke-width="4" />
+
+  <!-- Shield Vault Icon -->
+  <path d="M256 80 L390 140 V270 C390 350 256 432 256 432 C256 432 122 350 122 270 V140 Z" fill="#0f172a" stroke="url(#accentGrad)" stroke-width="14" stroke-linejoin="round" />
+  
+  <!-- Encrypted Pulse / Receipt Line -->
+  <path d="M190 260 L230 260 L248 210 L272 310 L288 260 L322 260" fill="none" stroke="#10b981" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Lock Clasp at Top -->
+  <rect x="226" y="150" width="60" height="48" rx="12" fill="none" stroke="#38bdf8" stroke-width="10" />
+</svg>
