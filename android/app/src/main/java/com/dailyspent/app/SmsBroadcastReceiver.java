@@ -127,8 +127,13 @@ public class SmsBroadcastReceiver extends BroadcastReceiver {
             ? "DailySpent: Bank SMS Auto-Captured"
             : "DailySpent: ₹" + amountStr + " Auto-Captured!";
 
+        int appIcon = context.getApplicationInfo().icon;
+        if (appIcon == 0) {
+            appIcon = android.R.drawable.ic_dialog_info;
+        }
+
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setSmallIcon(appIcon)
             .setContentTitle(title)
             .setContentText("Transaction categorized and encrypted automatically.")
             .setStyle(new NotificationCompat.BigTextStyle().bigText(smsText))
