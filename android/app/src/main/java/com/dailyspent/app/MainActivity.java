@@ -19,14 +19,14 @@ public class MainActivity extends BridgeActivity {
     private static final String KEY_SMS_QUEUE = "pending_sms_json";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         instance = this;
         requestSmsPermissions();
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         instance = this;
         drainPendingQueue();
@@ -102,7 +102,7 @@ public class MainActivity extends BridgeActivity {
     }
 
     @Override
-    protected void onDestroy() {
+    public void onDestroy() {
         super.onDestroy();
         if (instance == this) {
             instance = null;

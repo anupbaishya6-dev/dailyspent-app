@@ -548,8 +548,27 @@ export const SettingsPage: React.FC<SettingsPageProps> = ({
                     How to Package DailySpent into an Android APK for Gumroad
                   </div>
                   <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                    DailySpent is built with full Progressive Web App (PWA) standards (with offline service worker, manifest, and icons). You have two ways to distribute it on Gumroad:
+                    DailySpent is built with native Android Capacitor and PWA standards (with offline service worker, background SMS broadcast receiver, manifest, and icons):
                   </p>
+
+                  <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <div>
+                      <div className="text-xs font-bold text-emerald-700 dark:text-emerald-300">
+                        DailySpent Android APK (Pre-Built &amp; Ready)
+                      </div>
+                      <div className="text-[11px] text-slate-600 dark:text-slate-300">
+                        Includes 24/7 background SMS parser receiver and offline encrypted vault.
+                      </div>
+                    </div>
+                    <a
+                      href="/DailySpent.apk"
+                      download="DailySpent.apk"
+                      className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-xs flex items-center gap-2 shadow-sm transition shrink-0"
+                    >
+                      <Download className="w-3.5 h-3.5" />
+                      Download DailySpent.apk
+                    </a>
+                  </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
                     {/* Option 1: APK file download */}

@@ -21,7 +21,7 @@ jobs:
           node-version: 22
 
       - name: Set up Java 21
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '21'
           distribution: 'temurin'
@@ -49,6 +49,8 @@ jobs:
         working-directory: ./android
         run: |
           chmod +x gradlew
+          yes | sdkmanager --licenses 2>/dev/null || true
+          echo "sdk.dir=${ANDROID_HOME:-/usr/local/lib/android/sdk}" > local.properties
           ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload DailySpent APK
